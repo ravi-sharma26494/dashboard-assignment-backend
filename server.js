@@ -7,9 +7,6 @@ const dotenv = require("dotenv").config();
 const app = express();
 
 // const mongoURI = "mongodb://localhost:27017/netweave-store";
-const mongoURI =
-  "mongodb+srv://ravisharma26494:PnJKgZqCctxmwIoS@cluster0.hqql3lj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-
 app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 

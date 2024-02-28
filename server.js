@@ -17,7 +17,7 @@ app.use(
 app.use(express.json({ limit: "10mb" }));
 
 //-----------------This is for only testing purpose -----------------------------------------------------------//
-//use it for the database insertion
+//use it for the JSON DATA insertion, into the database
 
 app.post("/api/insertdata", async (req, res) => {
   try {

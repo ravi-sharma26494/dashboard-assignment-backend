@@ -9,7 +9,7 @@ const app = express();
 // const mongoURI = "mongodb://localhost:27017/netweave-store";
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://netweave-dashboard.vercel.app/"],
+    origin: ["http://localhost:3000", "https://netweave-dashboard.vercel.app"],
     credentials: true,
   })
 );

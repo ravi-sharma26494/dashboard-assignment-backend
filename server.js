@@ -9,13 +9,14 @@ const app = express();
 // const mongoURI = "mongodb://localhost:27017/netweave-store";
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://netweave-api.onrender.com"],
+    origin: ["http://localhost:3000", "https://netweave-dashboard.vercel.app/"],
     credentials: true,
   })
 );
 
 app.use(express.json({ limit: "10mb" }));
 
+//-----------------This is for only testing purpose -----------------------------------------------------------//
 app.post("/api/insertdata", async (req, res) => {
   try {
     const requestData = req.body; // Assuming you're sending an array of objects in the request body

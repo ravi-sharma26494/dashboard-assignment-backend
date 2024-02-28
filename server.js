@@ -17,6 +17,8 @@ app.use(
 app.use(express.json({ limit: "10mb" }));
 
 //-----------------This is for only testing purpose -----------------------------------------------------------//
+//use it for the database insertion
+
 app.post("/api/insertdata", async (req, res) => {
   try {
     const requestData = req.body; // Assuming you're sending an array of objects in the request body
@@ -27,6 +29,8 @@ app.post("/api/insertdata", async (req, res) => {
     res.status(500).json({ error: "Internal server error" });
   }
 });
+
+//------------------------Ignore the above line -------------------------------------------------------------------------
 app.get("/api/getdata", async (req, res) => {
   try {
     const allData = await Data.find({});

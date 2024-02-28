@@ -15,20 +15,6 @@ app.use(
   })
 );
 
-//-----------------This is for only testing purpose -----------------------------------------------------------//
-//use it for the JSON DATA insertion, into the database
-
-app.post("/api/insertdata", async (req, res) => {
-  try {
-    const requestData = req.body; // Assuming you're sending an array of objects in the request body
-    const insertedData = await Data.insertMany(requestData);
-    res.json(insertedData);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: "Internal server error" });
-  }
-});
-
 //------------------------Ignore the above line -------------------------------------------------------------------------
 app.get("/api/getdata", async (req, res) => {
   try {

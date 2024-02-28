@@ -7,14 +7,13 @@ const dotenv = require("dotenv").config();
 const app = express();
 
 // const mongoURI = "mongodb://localhost:27017/netweave-store";
+app.use(express.json({ limit: "10mb" }));
 app.use(
   cors({
     origin: ["http://localhost:5173", "https://netweave-dashboard.vercel.app"],
     credentials: true,
   })
 );
-
-app.use(express.json({ limit: "10mb" }));
 
 //-----------------This is for only testing purpose -----------------------------------------------------------//
 //use it for the JSON DATA insertion, into the database
